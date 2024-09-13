@@ -2,13 +2,11 @@ export const Partner = ({ sex, isMarried, partnerName }) => {
   let message = 'I am not married';
 
   if (sex === 'm' && isMarried === true) {
-    message = <p className="Person__partner">{`${partnerName} is my wife`}</p>;
+    message = `${partnerName} is my wife`;
   }
 
   if (sex === 'f' && isMarried === true) {
-    message = (
-      <p className="Person__partner">{`${partnerName} is my husband`}</p>
-    );
+    message = `${partnerName} is my husband`;
   }
 
   return <p className="Person__partner">{message}</p>;
